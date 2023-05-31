@@ -17,7 +17,6 @@ class Buscador
         $this->crawler = $crawler;
     }
 
-
     public function buscar(string $url): array
     {
             $resposta = $this->httpClient->request('GET', $url);
@@ -30,7 +29,6 @@ class Buscador
             foreach ($elementosCursos as $elemento) {
                 $cursos[] = $elemento->textContent;
             }
-
             return $cursos;
     }
 }
